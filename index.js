@@ -4,6 +4,12 @@ const currentPlayer = document.querySelector("#player");
 const startbutton = document.querySelector(".btn-start");
 const stopbutton = document.querySelector(".btn-stop");
 
+// Get the modal
+const modal = document.querySelector(".bg-modal");
+const modal_msg = document.querySelector(".modal-content p");
+const close = document.querySelector(".close");
+
+
 //Create squares for the board
 for (let i = 0; i < 49; i++) {
   let div = document.createElement("div");
@@ -129,7 +135,8 @@ function move() {
   } else {
     clearInterval(time);
     if (checkWinner()) {
-      alert(currentPlayer.innerHTML + ' is the winner');
+      modal_msg.innerHTML = (currentPlayer.innerHTML + ' is the winner')
+      modal.style.display = "block";
       players[currentPlayer.innerHTML].score.innerHTML++
       gameOver();
     } else {
@@ -174,3 +181,13 @@ function placePiece() {
 
 startbutton.addEventListener("click", gameOn);
 stopbutton.addEventListener("click", gameOver);
+
+close.addEventListener('click', () => {
+  modal.style.display = 'none';
+})
+
+window.onclick = (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
