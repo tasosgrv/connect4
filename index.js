@@ -23,7 +23,6 @@ const players = {
     score: document.querySelector('#yellow')
   }
 };
-console.log(players)
 
 let currentSquare = 0;
 let time;
@@ -146,7 +145,6 @@ function undraw() {
 }
 
 function draw() {
-  //console.log(currentSquare);
   squares[currentSquare].classList.add(currentPlayer.innerHTML);
   squares[currentSquare].classList.add("taken");
   squares[currentSquare].style.backgroundColor = currentPlayer.innerHTML;
