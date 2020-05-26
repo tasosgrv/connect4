@@ -1,0 +1,81 @@
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(rgb(0, 94, 202), rgb(97, 147, 212));
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5em;
+  color: rgb(255, 208, 0);
+  text-shadow: 0.1em 0.1em black;
+}
+.controls {
+  text-align: center;
+  color: white;
+}
+
+.score {
+  font-size: 3em;
+  font-weight: 800;
+  align-content: center;
+  margin: 1em;
+}
+
+.controls #red{
+  color: red
+}
+.controls #yellow{
+  color: yellow
+}
+
+.controls button {
+  font-size: 1.2em;
+  color: white;
+  background-color: red;
+  padding: 0.4em;
+  border-radius: 35%;
+  border: 3px solid white;
+}
+
+.controls button:hover {
+  background-color: rgb(255, 116, 116);
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.board {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.board div {
+  width: 40px;
+  height: 40px;
+  margin: 1px auto;
+  background-color: blue;
+  cursor: not-allowed;
+}
+
+.yellow {
+  background-color: yellow;
+  border-radius: 50%;
+  cursor: not-allowed;
+}
+
+.red {
+  background-color: red;
+  border-radius: 50%;
+  cursor: not-allowed;
+}
