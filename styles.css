@@ -116,7 +116,7 @@ h4 {
   color: white;
   margin: 10% auto; /* 1% from the top and centered */
   padding: 20px;
-  width: 250px; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
   border-radius: 10px;
   -webkit-animation: animatebottom 0.5s ease-out ;
   animation: animatebottom 0.5s ease-out;
